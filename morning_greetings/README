@@ -43,3 +43,13 @@ message_generator creates messages based on the contacts fetched by ContactsMana
 message_sender uses the generated messages and contact details to simulate sending.
 logger records every transaction to maintain a log of all messages sent.
 The main script (main.py) acts as the controller, ensuring each of these parts communicates effectively to automate the task as intended.
+
+
+
+Package Structure
+morning_greetings/: Contains the package modules:
+contacts_manager.py: Manages the contact information.
+message_generator.py: Generates personalized messages.
+message_sender.py: Simulates sending messages.
+logger.py: Logs each message sent.
+main.py: The main script located outside the package. It integrates all modules and sets up the scheduling system.

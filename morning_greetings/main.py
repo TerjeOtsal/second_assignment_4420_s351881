@@ -59,4 +59,4 @@ def schedule_morning_greetings(time_str):
 
 if __name__ == "__main__":
     # Example: Schedule the messages to be sent at 08:00 AM every day
-    schedule_morning_greetings("08:00")
+    schedule_morning_greetings("22:46")
