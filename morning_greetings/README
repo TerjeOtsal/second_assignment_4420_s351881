@@ -1,0 +1,28 @@
+readmefile
+
+This is the second manditory assigment for 4420 by s351881
+# Morning Greetings Package
+
+This package automates the process of sending personalized "Good Morning" messages to a list of friends. 
+
+## Package Structure
+
+- `contacts.py`: Manages contact information.
+- `message_generator.py`: Generates personalized "Good Morning" messages.
+- `message_sender.py`: Simulates sending the messages.
+- `logger.py`: Logs the messages that were sent.
+- `main.py`: Integrates all the modules and performs the automation.
+
+## How to Install
+
+1. Clone the repository.
+2. Install the package using pip:
+    ```bash
+    pip install .
+    ```
+
+## How to Use
+
+Run the main script to send messages:
+```bash
+python main.py
