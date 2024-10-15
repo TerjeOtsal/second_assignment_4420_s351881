@@ -1,28 +1,45 @@
-readmefile
+s351881
+ October 2024
 
-This is the second manditory assigment for 4420 by s351881
-# Morning Greetings Package
+The "Morning_greetings" Python package was made to automate the process of sending personalized "Good Morning" messages to a list of contacts, and is the second assignment for ACIT4420-1 course. The package is designed with multiple modules that work together to manage contacts, generate messages, simulate sending them, and log activities. Additionally, an extra feature was implemented to schedule the messages to run at a set time daily.
 
-This package automates the process of sending personalized "Good Morning" messages to a list of friends. 
+How the Code Works
+The package is structured into several modules, each handling a different aspect of the task:
 
-## Package Structure
+Contacts Manager (contacts_manager.py):
 
-- `contacts.py`: Manages contact information.
-- `message_generator.py`: Generates personalized "Good Morning" messages.
-- `message_sender.py`: Simulates sending the messages.
-- `logger.py`: Logs the messages that were sent.
-- `main.py`: Integrates all the modules and performs the automation.
+This module manages the contact list. It stores details such as name, email, and preferred greeting time for each contact.
+It provides methods for adding, removing, and retrieving contacts.
+This module allows other parts of the package to access and manage contacts efficiently.
+Message Generator (message_generator.py):
 
-## How to Install
+This module has a simple function that takes a contact’s name and returns a personalized "Good Morning" message.
+The message format is straightforward, ensuring clarity and personalization.
+Message Sender (message_sender.py):
 
-1. Clone the repository.
-2. Install the package using pip:
-    ```bash
-    pip install .
-    ```
+This module simulates sending the message. It takes an email address and a message, and prints them to the console as if the message is being sent.
+While it does not send actual emails, it replicates the output behavior expected in a real system.
+Logger (logger.py):
 
-## How to Use
+This module logs each message that is "sent" by writing the details (contact name and message) with a timestamp to a text file.
+It ensures that every message transaction is recorded for tracking purposes.
+Main Script (main.py):
 
-Run the main script to send messages:
-```bash
-python main.py
+The main.py script integrates all the modules. It sets up the automation process as follows:
+Initializes ContactsManager and retrieves the list of contacts.
+Iterates over the contacts, using generate_message to create a message for each.
+Simulates sending the message using send_message.
+Logs each sent message with log_message.
+This script brings all the pieces together, making the package functional as a cohesive system.
+Extra Feature: Scheduling Messages
+To add an extra level of automation, the script also allow scheduling messages at a specific time each day using the schedule library:
+
+The function schedule_morning_greetings sets up the message-sending process to run at a defined time daily (e.g., 08:00 AM).
+The script runs continuously in a loop, checking the time and executing the scheduled function when the time matches.
+This feature mimics real-world scheduling systems, adding a practical element to the package.
+How the Parts Work Together
+The ContactsManager supplies the contact details needed by the other modules.
+message_generator creates messages based on the contacts fetched by ContactsManager.
+message_sender uses the generated messages and contact details to simulate sending.
+logger records every transaction to maintain a log of all messages sent.
+The main script (main.py) acts as the controller, ensuring each of these parts communicates effectively to automate the task as intended.

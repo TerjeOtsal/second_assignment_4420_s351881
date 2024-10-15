@@ -1,9 +1,9 @@
 # contacts.py
 
 class Contacts:
-    """
+    """"
     A class to manage the list of friends for sending personalized 'Good Morning' messages.
-    """
+    """""""""
 
     def __init__(self):
         """Initializes an empty list of contacts."""
